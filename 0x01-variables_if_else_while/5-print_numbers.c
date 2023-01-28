@@ -7,7 +7,8 @@
 int main(void)
 {
 int p;
-for (num = 0; num < 10; num++)
-printf("%d", num);
+for (p  = 0; p < 10; p++)
+printf("%d", p);
+ printf("\n");
 return (0);
 }
