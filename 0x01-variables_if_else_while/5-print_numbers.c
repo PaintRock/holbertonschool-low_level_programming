@@ -9,6 +9,6 @@ int main(void)
 int p;
 for (p  = 0; p < 10; p++)
 printf("%d", p);
- printf("\n");
+printf("\n");
 return (0);
 }
