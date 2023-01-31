@@ -1,5 +1,12 @@
-#include <stdio.h>/**
- * main - Prints the alphabet in lowercase.
+/*
+ * File: 0-putchar.c
+ *
+ * Author: Adel Knode
+ */
+
+#include <main.h>
+/**
+ * main - Prints '_putchar' in lowercase.
  *
  * Return: Always 0.
  */
