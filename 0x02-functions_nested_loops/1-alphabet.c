@@ -1,3 +1,10 @@
+/*
+ *File: 1-alphabet.c
+ *
+ *Auth:  A. Adel Knode
+ */
+
+
 #include <stdio.h>
 
 /**
