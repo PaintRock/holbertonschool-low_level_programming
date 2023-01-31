@@ -1,0 +1,17 @@
+*
+* Write a function that adds two integers and returns the result
+*
+
+#include "holberton.h"
+
+/**
+*add -
+*@num1:
+*@num2:
+*
+*Return:
+*/
+int add(int num1, int num20
+{
+return (num1 + num2);
+}
