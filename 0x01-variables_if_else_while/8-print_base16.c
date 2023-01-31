@@ -7,8 +7,11 @@
 int main(void)
 {
 int p;
- for (p  = 0x00; p < 0x16; p++)
-putchar((p % 0xf) + '0');
+char m;
+for (p  = 0; p < 10; p++)
+putchar((p % 10) + '0');
+for (m = 'a'; m <= 'f'; m++)
+putchar(m);
 putchar('\n');
 return (0);
 }
