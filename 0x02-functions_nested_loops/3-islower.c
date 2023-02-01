@@ -14,9 +14,8 @@
 */
 int main(void)
 {
-int _is_lower(int c);
+int c;
 if (c <= 'a' && c >= 'z')
-then
 return (1);
 else
 return (0);
