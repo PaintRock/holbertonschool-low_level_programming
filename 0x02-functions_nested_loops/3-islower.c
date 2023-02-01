@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*
 *File: 3-alphabet.c
 *
@@ -5,7 +6,7 @@
 */
 
 
-#include <stdio.h>
+#include "main.h"
 
 /**
 * int _islower(int c); Finds lowercase 'c'.
