@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 *File: 4-isalpha.c
 *main - check the code.
@@ -5,7 +7,7 @@
 */
 
 
-#include <main.h>
+#include "main.h"
 
 /**
 * int _islower(int c); Finds lowercase 'c'.
@@ -14,10 +16,9 @@
 */
 int main(void)
 {
-int _is_lower(int c);
+int c;
 if (c <= 'a' && c >= 'z')
-if c <= 'A' && c >= 'Z')
-then
+if (c <= 'A' && c >= 'Z')
 return (1);
 else
 return (0);
