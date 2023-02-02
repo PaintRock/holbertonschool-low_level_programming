@@ -9,15 +9,14 @@
 *
 * Return: Always 0.
 */
-int main(void)
+void print_alphabet_x10(void)
 {
-int count;
-char letter;
-while (count++ <= 9)
+	int c = 0;
+char l;
+while (c++ <= 9)
 {
-for (letter = 'a'; letter <= 'z'; letter++)
-putchar(letter);
+for (l = 'a'; l <= 'z'; l++)
+putchar(l);
 }
 putchar('\n');
-return (0);
 }
