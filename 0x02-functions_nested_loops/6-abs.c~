@@ -1,0 +1,11 @@
+#include "main.h"
+
+/**
+* int _abs - Finds lowercase 'c'.
+* @abv: integer input
+* Return: Not Always 0.
+*/
+int _abs(int abv)
+{
+	return (abv * ((abv > 0) - (abv < 0)));
+}
