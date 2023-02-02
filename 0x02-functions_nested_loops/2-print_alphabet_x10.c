@@ -1,11 +1,6 @@
-/*
-*File: 1-alphabet.c
-*
-*Auth:  A. Adel Knode
-*/
 #include "main.h"
 /**
-* void print_alphabet_x10(void); Prints the alphabet lowercase ten times.
+* print_alphabet_x10 -  Prints the alphabet lowercase ten times.
 *
 * Return: Always 0.
 */
