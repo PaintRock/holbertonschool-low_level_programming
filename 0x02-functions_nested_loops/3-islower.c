@@ -6,9 +6,9 @@
 */
 #include "main.h"
 /**
-* _islower(int c); Finds lowercase 'c'.
-*
-* Return: Not Always 0.
+*int _islower(int c); checks for lowercase
+*@c: single lertter input
+* Return: returns 1 if int c is lowercase.
 */
 int _islower(int c)
 {
