@@ -1,15 +1,13 @@
 #include "main.h"
 /**
- * print_numbers - print the numbers 0-9
- * followed by a new line
- * Return: 0 Always. SUCCESS
+ *print_numbers - print the numbers 0-9
  */
 void print_numbers(void)
 {
-	int i;
-	for (i = 0; i <= 9; i++)
+	int numi;
+	for (numi = 0; numi <= 9; numi++)
 	{
-		_putchar('0' + i);
+		_putchar ('0' + numi);
 	}
 	_putchar('\n');
 }
