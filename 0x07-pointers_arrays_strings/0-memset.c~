@@ -1,0 +1,19 @@
+#include "holberton.h"
+
+/**
+ * _memset - a funct ion that fills bytes
+ *@s: pointer
+ *@n: number of bytes
+ *@b: filling
+ *
+ * Return: Nothing.
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+	unsigned char *memory = s, value = c;
+
+	for (index = 0; index < n; index++)
+		memory[index] = value;
+	return (memory);
+}
