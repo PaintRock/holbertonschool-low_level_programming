@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *
+ * jack_bauer - twenty-four hours by the minute
  *
  *Return: 0
  */
