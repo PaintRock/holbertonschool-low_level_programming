@@ -1,13 +1,21 @@
 #include "main.h"
 /**
- *_puts - fx that prints a string
+ *print_rev - fx that prints a string
  *followed by a new lin and prints
- *@str: new line
+ *@s: line
  *Return: void
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
-	while (*str != 0)
-	_putchar(*str++);
+	int count = 0;
+
+	while (count >= 0)
+	{
+		if (s[count] == '\0')
+			break;
+		count++;
+	}
+	for (count--; count >= 0; count--)
+		_putchar(s[count]);
 	_putchar('\n');
 }
