@@ -1,16 +1,16 @@
 /*
-* File: 10-add.c
+*  10-add.c
 *
 */
 
 #include "main.h"
 
 /**
-*add -
-*@num1:
-*@num2:
+*add - add a and b
+*@num1: addee
+*@num2: adder
 *
-*Return:
+*Return: sum
 */
 int add(int num1, int num2)
 {
