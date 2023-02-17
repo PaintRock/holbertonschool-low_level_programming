@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  *_strpbrk - locates the first occurance of any of
  * the bytes in accept

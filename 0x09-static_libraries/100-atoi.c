@@ -1,4 +1,4 @@
-#iclude "main.h"
+#include "main.h"
 /**
  * _atoi - dont know
  * @s: letter

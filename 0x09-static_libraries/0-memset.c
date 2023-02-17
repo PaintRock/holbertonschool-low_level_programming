@@ -1,5 +1,4 @@
-#include "holberton.h"
-
+#include "main.c"
 /**
  * _memset - a funct ion that fills bytes
  *@s: pointer
