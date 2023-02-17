@@ -1,0 +1,445 @@
+!<arch>
+0-isupper.c/    0           0     0     644     185       `
+#include "main.h"
+/**
+ *_isupper - checks
+ *@c: int c
+ *Return: returns 1 if int c is uppercase
+ */
+int _isupper(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
+}
+
+0-memset.c/     0           0     0     644     277       `
+#include "holberton.h"
+
+/**
+ * _memset - a funct ion that fills bytes
+ *@s: pointer
+ *@n: number of bytes
+ *@b: filling
+ *
+ * Return: Nothing.
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	i = 0;
+	while (i < n)
+	{
+		s[i] = b;
+		i++;
+	}
+	return (s);
+}
+
+0-putchar.c/    0           0     0     644     307       `
+/*
+ * File: 0-putchar.c
+ *
+ * Author: Adel Knode
+ */
+
+#include <stdio.h>
+/**
+ * main - Prints '_putchar' in lowercase.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+
+putchar('_');
+putchar('p');
+putchar('u');
+putchar('t');
+putchar('c');
+putchar('h');
+putchar('a');
+putchar('r');
+putchar('\n');
+
+return (0);
+}
+
+0-strcat.c/     0           0     0     644     429       `
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ *_strcat - Concatenate two strings
+ *@dest: The destination string
+ *@src: Source string
+ *
+ *Return: A pointer to the resulting string
+ */
+char *_strcat(char *dest, char *src)
+
+{
+	int i_1 = 0;
+	int i_2 = 0;
+
+	while (dest[i_1] != '\0')
+	{
+		i_1++;
+	}
+			while (src[i_2] != '\0')
+			{
+				dest[i_1 + i_2] = src[i_2];
+				i_2++;
+			}
+
+			dest[i_1 + i_2]  = '\0';
+			return (dest);
+}
+
+100-atoi.c/     0           0     0     644     100       `
+#iclude "main.h"
+/**
+ * _atoi - dont know
+ * @s: letter
+ * Return: int
+ */
+int _atoi(char *s)
+{
+
+
+}
+1-isdigit.c/    0           0     0     644     198       `
+#include "main.h"
+
+/**
+ * _isdigit - checks for 0 thru 9
+ * @c: input
+ * Return: returns 1 if int c is a digit
+ */
+
+int _isdigit(int c)
+
+{
+	if (c < 48 || c > 57)
+		return (0);
+	else
+		return (1);
+}
+1-memcpy.c/     0           0     0     644     300       `
+#include "holberton.h"
+
+/**
+ * _memcpy - function that copies bytes
+ * @dest: dest
+ * @src: src
+ * @n: num to cpy
+ *
+ * Return: a pointer to a dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	i = 0;
+
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
+}
+1-strncat.c/    0           0     0     644     458       `
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ *_strncat - Concatenate two strings
+ *@dest: The destination string
+ *@src: Source string
+ *@n: bytes
+ *Return: A pointer to the resulting string
+ */
+char *_strncat(char *dest, char *src, int n)
+
+{
+	int i_1 = 0;
+	int i_2 = 0;
+
+	while (dest[i_1] != '\0')
+	{
+		i_1++;
+	}
+			while (i_2 < n && src[i_2] != '\0')
+			{
+				dest[i_1 + i_2] = src[i_2];
+				i_2++;
+			}
+
+			dest[i_1 + i_2]  = '\0';
+			return (dest);
+}
+2-strchr.c/     0           0     0     644     334       `
+#include "holberton.h"
+/**
+ *_strchr - locates a character in a string
+ *@s: string
+ *@c: character
+ *
+ *Return: pointer to first c or NULL if not found
+ */
+char *_strchr(char *s, char c)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			return ((s + i));
+		i++;
+	}
+	if (c == '\0')
+		return ((s + i));
+	return (NULL);
+}
+2-strlen.c/     0           0     0     644     180       `
+#include "main.h"
+/**
+ *_strlen - returns the length of a string
+ *@s: string length
+ *Return: length
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s++)
+		(i++);
+	return (i);
+}
+2-strncpy.c/    0           0     0     644     361       `
+#include "holberton.h"
+/**
+* _strncpy - Copies
+* @dest: storage
+* @n: Max Bites
+* @src: the source
+* Return: A pointer
+*/
+char *_strncpy(char *dest, char *src, int n)
+
+{
+	int i = 0, source_len = 0;
+
+	while (src[i++])
+		source_len++;
+
+	for (i = 0; src[i] && i < n; i++)
+		dest[i] = src[i];
+
+	for (i = source_len; i < n; i++)
+		dest[i] = '\0';
+
+	return (dest);
+}
+
+3-islower.c/    0           0     0     644     215       `
+#include "main.h"
+/**
+* _islower - checks for lowercase
+* @c: single lertter input
+* Return: returns 1 if int c is lowercase.
+*/
+int _islower(int c)
+{
+
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
+}
+
+3-puts.c/       0           0     0     644     208       `
+#include "main.h"
+/**
+ *_puts - fx that prints a string
+ *followed by a new lin and prints
+ *@str: new line
+ *Return: void
+ */
+void _puts(char *str)
+{
+	while (*str != 0)
+	_putchar(*str++);
+	_putchar('\n');
+}
+3-strcmp.c/     0           0     0     644     254       `
+#include "holberton.h"
+/**
+ *_strcmp - Compares pointers to two strings
+ *@s1: pointer one
+ *@s2: pointer two
+ *
+ * Return: complicated
+ */
+int _strcmp(char *s1, char *s2)
+{
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+
+	return (*s1 - *s2);
+}
+3-strspn.c/     0           0     0     644     522       `
+#include "holberton.h"
+/**
+ *_strspn - fx that gets the length of a sub
+ *@s: initial segment
+ *@accept: not sure
+ *
+ *Return: number of bytes in accept
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int i, z, count, checker;
+
+	i = 0;
+	z = 0;
+	checker = 0;
+	count = 0;
+	while (s[i] != '\0')
+	{
+		z = 0;
+		checker = 0;
+		while (accept[z] != '\0')
+		{
+			if (accept[z] == s[i])
+			{
+				count++;
+				checker = 1;
+				break;
+			}
+			z++;
+				}
+		if (checker == 0)
+			return (count);
+		i++;
+	}
+	return (count);
+}
+4-isalpha.c/    0           0     0     644     270       `
+#include "main.h"
+/**
+* _isalpha - Finds lowercase 'c'.
+* @c: cannot think of what to say
+* Return: 1 if int c is an alphabet character
+*
+*/
+int _isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+		else
+		{
+			return (0);
+		}
+}
+4-strpbrk.c/    0           0     0     644     398       `
+#include "holberton.h"
+/**
+ *_strpbrk - locates the first occurance of any of
+ * the bytes in accept
+ *@s: string
+ *@accept: dunno
+ *
+ * Return: pointer or NULL
+ */
+char *_strpbrk(char *s, char *accept)
+{
+	unsigned int i, z;
+
+	i = 0;
+	z = 0;
+	while (s[i] != '\0')
+	{
+		z = 0;
+		while (accept[z] != '\0')
+		{
+			if (s[i] == accept[z])
+				return ((s + i));
+			z++;
+		}
+		i++;
+			}
+	return (NULL);
+}
+5-strstr.c/     0           0     0     644     557       `
+#include "holberton.h"
+/**
+ *_strstr - locates a substring of any of
+ *@haystack: string
+ *@needle: the thing in the string
+ *
+ * Return: pointer or NULL
+ */
+char *_strstr(char *haystack, char *needle)
+{
+	unsigned int i, z, done;
+
+	i = 0;
+	z = 0;
+	done = 0;
+	while (haystack[i] != '\0')
+	{
+		if (needle[z] == haystack[i])
+		{
+			done = 1;
+			z++;
+		}
+		else
+		{
+			done = 0;
+			z = 0;
+		}
+
+		if (needle[z] == '\0' && done == 1)
+			return ((haystack + i - z + 1));
+		else if (needle[z] == '\0' && done == 0)
+			return (haystack);
+		i++;
+	}
+	return (NULL);
+}
+
+6-abs.c/        0           0     0     644     155       `
+#include "main.h"
+
+/**
+* _abs - Finds lowercase 'c'.
+* @a: integer input
+* Return: Not Always 0.
+*/
+int _abs(int a)
+{
+	return (a * ((a > 0) - (a < 0)));
+}
+
+9-strcpy.c/     0           0     0     644     164       `
+#include "main.h"
+/**
+ * strcpy - stringcpy
+ *@dest: destination
+ *@char: the character
+ *@src: the source
+ *Return: 0
+ */
+char *_strcpy(char *dest, char *src)
+{
+}
