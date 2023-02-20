@@ -8,17 +8,19 @@
  */
 int main(int argc, char *argv[])
 {
-int i, product;
+	int a, product = 1;
 
 if (argc != 3)
 {
 printf("Error\n");
 return (1);
 }
-for (i = 0; i < argc; i++)
+
 {
-printf("%d", product);
-product *= atoi(argv[i]);
+	for (a = 1; a < argc; a++)
+	product *= atoi(argv[a]);
+	printf("%d\n", product);
 }
+
 return (0);
 }
