@@ -4,7 +4,7 @@
  *alloc_grid - allocate grid with alloc
  *@width: how wide
  *@height: how high
- *Return; right
+ *Return: right
  */
 int **alloc_grid(int width, int height)
 {

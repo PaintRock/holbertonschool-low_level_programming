@@ -2,7 +2,9 @@
 #include <stdlib.h>
 /**
  * free grid - creates a grid array
- *
+ *@grid: a grid
+ *@height: high
+ *Return: void
  *
  */
 void free_grid(int **grid, int height)
