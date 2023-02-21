@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * free grid - creates a grid array
+ *free_grid - creates a grid array
  *@grid: a grid
  *@height: high
  *Return: void
