@@ -1,29 +1,18 @@
-
+#include <stdio.h>
 #include <stdlib.h>
-#include <main.h>
 /**
- * create_array - creates an array and initializes it
+ * free grid - creates a grid array
  *
-char *create_array(unsigned int size, char c)
+ *
+ */
+void free_grid(int **grid, int height)
 
 {
-	unsigned int a;
-	char *array;
+	int a;
 
-a = 0;
-
-	if (size <= 0)
-		return (0);
-
-		array = malloc(size);
-	if (array == 0)
-	printf("NULL");
-		return (0);
-
-	while (a < size)
+	for (a = 0; a < height; a++)
 	{
-		array[a] = c;
-		a++;
+		free(grid[a]);
 	}
-	return (array);
+	free(grid);
 }
