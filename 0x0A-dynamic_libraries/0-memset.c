@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * _memset - a funct ion that fills bytes
  *@s: pointer
