@@ -3,35 +3,40 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * string_nconcat - returns a pointer
+ *string_nconcat - returns a pointer
  *@s1: string to be joined to
  *@s2: string that joins
- *@n; bytes of s2
+ *@n: bytes of s2
  *Return: empty string for NULL
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	if (s1 == NULL)
+	char *str;
+	unsigned int i, a, b;
+
+	a = b = 0;
+	if (s1)
+		for (; s1[a]; a++)
+			;
+	if (s2)
+		for (; s2[b]; b++)
+			;
+	if (!(n >= b))
+		b = n;
+
+	str = malloc(sizeof(char) * (a + b) + 1);
+	if (!str)
+		return (NULL);
+
+	for (i = 0; i < (a + b); i++)
 	{
-		s1 = "";
+		if (i < a)
+			str[i] = s1[i];
+		else
+			str[i] = s2[i - a];
 	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	size_t s1_len = strlen(s1);
-	size_t s2_len = strlen(s2);
-	if (n >= s2_len)
-	{
-		n = s2_len;
-}
-		char *sum = malloc(s1_len + n +1);
-		if (sum == NULL)
-		{
-			return (NULL);
-	}
-	memcpy(sum, s1, s1_len);
-	memcpy(sum + s1_len, s2, n);
-	sum[s1_len + n] = '\0';
-	return (sum);
+
+	str[i] = '\0';
+
+	return (str);
 }
