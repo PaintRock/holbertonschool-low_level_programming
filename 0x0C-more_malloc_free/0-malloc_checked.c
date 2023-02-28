@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * malloc_checked - returns a pointer
+ * malloc_checked - returns a pointer to mall
  * @b: returns a pointer
  * Return: a pointer to the allocated mem unless it fails then 98
  */
