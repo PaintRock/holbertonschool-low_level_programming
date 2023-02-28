@@ -1,4 +1,4 @@
-/*
+/**
  * File: 0-putchar.c
  *
  * Author: Adel Knode
@@ -13,6 +13,5 @@
 int main(void)
 {
 	printf("_putchar\n");
-	
 return (0);
 }
