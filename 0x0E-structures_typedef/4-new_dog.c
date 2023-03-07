@@ -7,17 +7,8 @@
  *@name: name of the new dog
  *@age: age of the new dog
  *@owner: name of the owner
- *Return: a new dog (poop)
  */
-void _strcopy(char *dst, char *src)
-{
-	int i;
 
-	for (i = 0; src[i]; i++)
-		dst[i] = src[i];
-	dst[i] = '\0';
-
-}
 
 
 
@@ -54,8 +45,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	_strcpy(new_name, name);
-	_strcpy(new_owner, owner);
+	strcpy(new_name, name);
+	strcpy(new_owner, owner);
 	new_dog->name = new_name;
 	new_dog->age = age;
 	new_dog->owner = new_owner;
