@@ -16,4 +16,10 @@ typedef struct print_fn_s
     char fn;
     void (*print)(va_list);
 } print_fn_t;
+
+void print_float(va_list arg);
+	void print_string(va_list arg);
+void print_char(va_list arg);
+	void print_int(va_list arg);
+
 #endif
