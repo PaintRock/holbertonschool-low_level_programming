@@ -2,15 +2,16 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * print_dog -- prints a struct dog
- * @d: dog?
- * Return: void
+ * print_dog - prints contents of dog struct
+ * @d: some dog struct.
+ *
+ * Return: Nothing
  */
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
+	if (!d)
 		return;
-	printf("Name: %s\n", d->name ? d->name : "Name: nil\n");
-	d->age >= 0 ? printf("Age: %f\n", d->age) : printf("Age: nil\n");
-	printf("Owner: %s\n", d->owner ? d->owner : "Owner: nil\n");
+	d->name ? printf("Name: %s\n", d->name) : printf("Name: (nil)\n");
+	d->age >= 0 ? printf("Age: %6f\n", d->age) : printf("Age: (nil)\n");
+	d->owner ? printf("Owner: %s\n", d->owner) : printf("Owner: (nil)\n");
 }
