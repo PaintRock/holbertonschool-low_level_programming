@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * free_dog : free the memory allocated by the previous problem
+ *free_dog - free the memory allocated by the previous problem
  *@d: pointer to the space to be freed
  *Return: a void
  */
