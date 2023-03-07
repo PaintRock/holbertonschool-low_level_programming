@@ -3,12 +3,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *print_numbers - a function that prints numbers with a new line
+ *print_strings - a function that prints numbers with a new line
  *@n: the number of integers passed to the function
  *@separator: the string to be printed between numbers
  *Return: 0 if there is no parameter
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list ap;
 unsigned int i;
