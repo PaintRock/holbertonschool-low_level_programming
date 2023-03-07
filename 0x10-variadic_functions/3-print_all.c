@@ -1,89 +1,92 @@
-#include "variadic_functions.h"
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "variadic_functions.h"
 
 /**
- * print_char - prints a character
- * @arg: the argument to print
+ * pr_int - print a integer type;
+ * @val: a va_list struct to process;
  */
-void print_char(va_list arg)
+void pr_int(va_list val)
 {
-	char c = va_arg(arg, int);
-
-	printf("%c", c);
+	printf("%d", va_arg(val, int));
 }
 
 /**
- * print_int - prints an integer
- * @arg: the argument to print
+ * pr_char - print a char type;
+ * @val: a va_list struct to process;
  */
-void print_int(va_list arg)
+void pr_char(va_list val)
 {
-	int i = va_arg(arg, int);
-
-	printf("%d", i);
+	printf("%c", va_arg(val, int));
 }
 
 /**
- * print_float - prints a float
- * @arg: the argument to print
+ * pr_float - prints a double type;
+ * @val: a va_list struct to process;
  */
-void print_float(va_list arg)
+void pr_float(va_list val)
 {
-	double d = va_arg(arg, double);
-
-	printf("%f", d);
+	printf("%f", va_arg(val, double));
 }
 
 /**
- * print_string - prints a string
- * @arg: the argument to print
+ * pr_str - print a string type or (nil) if empty/NULL;
+ * @val: a va_list struct to process;
  */
-void print_string(va_list arg)
+void pr_str(va_list val)
 {
-	char *s = va_arg(arg, char *);
+	char *r;
 
-	if (s == NULL)
+	r = va_arg(val, char *);
+	switch (!r)
+	{
+	case 0:
+		printf("%s", r);
+		break;
+	case 1:
 		printf("(nil)");
-	else
-		printf("%s", s);
+		break;
+	}
+
 }
 
 /**
- * print_all - prints anything
- * @format: a list of types of arguments passed to the function
+ * print_all - print all argument that match with format.
+ * @format: type to print out.
+ * @...: arguments to print.
+ * Return: Nothing
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0, j;
-	char *separator = "";
 
-	print_fn_t print_fn[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL}
+	int i, j;
+	va_list vls;
+	po_op ops[] = {
+		{"c", pr_char},
+		{"i", pr_int},
+		{"f", pr_float},
+		{"s", pr_str},
+		{NULL, NULL}
 	};
-	va_start(args, format);
 
-	while (format && format[i])
+	va_start(vls, format);
+	i = j = 0;
+	while (format && format[j])
 	{
-		j = 0;
-		while (print_fn[j].fn != '\0')
+		i = 0;
+		while (ops[i].op)
 		{
-			if (print_fn[j].fn == format[i])
+			if (ops[i].op[0] == format[j])
 			{
-				printf("%s", separator);
-				print_fn[j].print(args);
-				separator = ", ";
-				break;
+				(ops[i].f)(vls);
+				if (format[j + 1])
+					printf(", ");
 			}
-			j++;
+			i++;
 		}
-		i++;
+		j++;
+
 	}
-	va_end(args);
 	printf("\n");
+	va_end(vls);
 }
