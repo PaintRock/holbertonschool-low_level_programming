@@ -7,7 +7,7 @@
  *@name: name of the new dog
  *@age: age of the new dog
  *@owner: name of the owner
- * Retern: poop
+ *Return: poop
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
