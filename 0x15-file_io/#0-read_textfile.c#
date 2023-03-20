@@ -1,0 +1,9 @@
+#include "main.h"
+
+/**
+ * read_textfile - function that reads a text file and prints it
+ * @filename: name of the file pointer
+ * @letters: amount of letters
+ * Return: Bytes read.
+ */
+
