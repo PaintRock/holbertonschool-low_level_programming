@@ -1,26 +1,30 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - check the code
- *
- * Return: Always EXIT_SUCCESS.
+ *add_dnodeint - add a new node at the begin of the list.
+ *@head: head fo the linked list.
+ *@n: value to add to the new node.
+ *Return: Address of the new node.
  */
-int main(void)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *head;
+	dlistint_t *new;
 
-	head = NULL;
-	add_dnodeint(&head, 0);
-	add_dnodeint(&head, 1);
-	add_dnodeint(&head, 2);
-	add_dnodeint(&head, 3);
-	add_dnodeint(&head, 4);
-	add_dnodeint(&head, 98);
-	add_dnodeint(&head, 402);
-	add_dnodeint(&head, 1024);
-	print_dlistint(head);
-	return (EXIT_SUCCESS);
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = NULL;
+	new->prev = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
+	(*head)->prev = new;
+	new->next = *head;
+	*head = new;
+	return (*head);
 }
