@@ -1,19 +1,37 @@
 #include "hash_tables.h"
 
 /**
- * key_index - function that gives you the index of a key
- * @key: the key
- * @size:  the size of the hash_table
- * Return: Index of key
+ * hash_table_set - Adds an element to the hash table.
+ * @ht: Pointer to the hash_table.
+ * @key: Pointer to the key.
+ * @value: Pointer to the value.
+ * Return: 1 if it succeeded, 0 otherwise
  */
-unsigned long int key_index(const unsigned char *key, unsigned long int size)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-unsigned long int key_index_hash;
+	unsigned long int index;
+	hash_node_t *new_node;
 
-if (key == NULL)
-	return (0);
+	if (ht == NULL || key == NULL || value == NULL)
+		return (0);
 
-key_index_hash = hash_djb2(key) % size;
+	index = key_index((const unsigned char *)key, ht->size);
 
-return (key_index_hash);
+	if (ht->array[index] != NULL && strcmp(ht->array[index]->key, key) == 0)
+	{
+		ht->array[index]->value = strdup(value);
+		return (1);
+	}
+
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+	{
+		free(new_node);
+		return (0);
+	}
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
+	return (1);
 }
